@@ -1,2 +1,1 @@
-# My Name is Khadeer, This is My React JS First class.
-Let's Start.
+# My Name is Khadeer, My react Learning Journey.
