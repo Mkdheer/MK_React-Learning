@@ -43,6 +43,7 @@ function App() {
             <div className="w-full mb-1">
               <InputBox
               label = "from"
+              Mytype = "number"
               amount = {amount}
               currencyOptions = {currencyKeys}
               onCurrencyChange={(currency) => setCurrencyFrom(currency)}
@@ -60,11 +61,13 @@ function App() {
             <div className="w-full mb-1 -mt-3">
               <InputBox
               label = "To"
+              Mytype="text"
               amount = {convertedAmount}
               currencyOptions = {currencyKeys}
               onCurrencyChange={(currency) => setCurrencyTo(currency)}
               selectCurrency = {currencyTo}
               onAmountChange = {(currency) => setAmount(currency)}
+              currencyDisable = {true}
               />
             </div>
             <div className='flex justify-center mt-3 bg-fuchsia-800 p-2 rounded-xl px-5 text-white font-bold'>

@@ -4,6 +4,7 @@ import { useId } from "react"
 function Inputbox({
     label,
     amount,
+    Mytype,
     currencyOptions = [],
     onAmountChange,
     onCurrencyChange,
@@ -21,7 +22,7 @@ function Inputbox({
                </label>
                <input
                  id= {FormId}
-                 type="number"
+                 type={Mytype}
                  value={amount}
                  onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                  disabled = {amountDisable}
