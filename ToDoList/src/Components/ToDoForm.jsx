@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 import { myToDos } from "../Context/ToDoContext";
 
 function ToDoForm(){
 
-    const[data, setData] = useState("")
+    const[data, setData] =  React.useState("")
     const {addToDo} = myToDos()
 
     const add = (e)=>{

@@ -31,7 +31,7 @@
                 />
                 <input
                     type = "text"
-                    className = {`w-full h-10 ${ isToDoEditable ?"bg-sky-50 text-blue-900":"bg-sky-300"} 
+                    className = {`w-full h-10 ${ isToDoEditable ?"bg-sky-50 text-black font-medium":"bg-sky-300"} 
                                     ${toDo.toDoStatus?"line-through":""}
                                     border-none outline-none rounded-full p-4 text-white font-bold text-2xl`}
                     value={editMsg}
