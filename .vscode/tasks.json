@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "MyCurrencyConvertor",
+			"problemMatcher": [],
+			"label": "npm: dev - MyCurrencyConvertor",
+			"detail": "vite",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "003Tailwind",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - 003Tailwind",
+			"detail": "vite build"
+		}
+	]
+}
