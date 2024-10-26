@@ -1,4 +1,6 @@
-import React from 'react'
+// import React from 'react'
+
+import React, { useContext } from 'react'
 
 
 export const ToDoContext = React.createContext(
@@ -17,6 +19,6 @@ export const ToDoContext = React.createContext(
 
 export const ToDoProvider =  ToDoContext.Provider
 
-export const myToDos = () => {
-    return React.useContext(ToDoContext)
+export const useMyToDos = () => {
+    return useContext(ToDoContext)
 }

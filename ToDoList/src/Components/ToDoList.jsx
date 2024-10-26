@@ -1,9 +1,10 @@
-    import React, { useState } from "react";
-    import { myToDos } from "../Context/ToDoContext";
+    import React, {useState} from "react";
+    import { useMyToDos } from "../Context/ToDoContext";
+    import propTypes from "prop-types";
 
     function ToDoList({toDo}){
-        const {updateToDo, deleteToDo, statusCheck} = myToDos()
-        const [editMsg, setEditMsg] = useState(toDo.toDoText)
+        const {updateToDo, deleteToDo, statusCheck} = useMyToDos()
+        const [editMsg, setEditMsg] = React.useState(toDo.toDoText)
         const [isToDoEditable, setIsToDoEditable] = useState(false)
         const [isToggleDisable, setIsToggleDisable] = useState(false)
 
@@ -68,5 +69,20 @@
             </div>
         )
     }
+
+    ToDoList.propTypes = {
+        toDo : propTypes.shape(
+            {
+                id : propTypes.number.isRequired,
+                toDoText : propTypes.string.isRequired,
+                toDoStatus : propTypes.string.isRequired,
+                addToDo : propTypes.func.isRequired,
+                deleteToDo : propTypes.func.isRequired,
+                updateToDo : propTypes.func.isRequired,
+                statusCheck : propTypes.func.isRequired
+            }
+        ).isRequired,
+
+    };
 
     export default ToDoList

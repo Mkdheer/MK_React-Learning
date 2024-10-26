@@ -58,10 +58,10 @@ function App() {
             </div>
             <div className=''>
               {
-                toDos.map((toDoList)=>
+                toDos.map((toDo)=>
                   (
-                    <div key={toDoList.id} className='mb-5'>
-                      <ToDoList  toDo = {toDoList} />
+                    <div key={toDo.id} className='mb-5'>
+                      <ToDoList  toDo = {toDo} />
                     </div>
                   )
                           )
